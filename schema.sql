@@ -1,0 +1,19 @@
+PRAGMA foreign_keys=ON;
+PRAGMA synchronous=ON;
+PRAGMA journal_mode=WAL;
+
+CREATE TABLE user (
+	id INTEGER PRIMARY KEY AUTOINCREMENT;
+	name TEXT NOT NULL,
+	email TEXT NOT NULL,
+	password TEXT NOT NULL
+) STRICT;
+
+CREATE TABLE TASK (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	title TEXT NOT NULL,
+	description TEXT,
+	finished INTEGER NOT NULL DEFAULT 0,
+	user_id INTEGER NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES user(id);
+) STRICT;
