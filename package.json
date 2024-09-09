@@ -1,0 +1,27 @@
+{
+  "name": "je-be",
+  "version": "1.0.0",
+  "description": "## CRUD Node.js: como rodar e decisoes tomadas durante o desenvolvimento",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilyj80/je-be.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilyj80/je-be/issues"
+  },
+  "homepage": "https://github.com/wilyj80/je-be#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

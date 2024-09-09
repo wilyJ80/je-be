@@ -30,6 +30,6 @@ const authenticateToken = (req, res, next) => {
 app.use('/auth', authRoutes);
 app.use('/tasks', authenticateToken, taskRoutes);
 
-app.listen(PORT () => {
+app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);
 });

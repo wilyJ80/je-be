@@ -7,4 +7,22 @@ db.exec(`
 	PRAGMA journal_mode=WAL;
 `);
 
+db.exec(`
+    CREATE TABLE IF NOT EXISTS user (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL,
+        password TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS TASK (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        description TEXT,
+        finished INTEGER NOT NULL DEFAULT 0,
+        user_id INTEGER NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES user(id)
+    );
+`);
+
 module.exports = db;
