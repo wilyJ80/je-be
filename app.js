@@ -18,7 +18,7 @@ const authenticateToken = (req, res, next) => {
 		return res.sendStatus(403);
 	}
 
-	jwt.verify(token,JWT_SECRET, (err, user) => {
+	jwt.verify(token, JWT_SECRET, (err, user) => {
 		if (err) {
 			return res.sendStatus(403);
 		}
@@ -30,6 +30,4 @@ const authenticateToken = (req, res, next) => {
 app.use('/auth', authRoutes);
 app.use('/tasks', authenticateToken, taskRoutes);
 
-app.listen(PORT, () => {
-	console.log(`Server running on port ${PORT}`);
-});
+module.exports = app;
