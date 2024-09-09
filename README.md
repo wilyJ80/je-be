@@ -34,13 +34,13 @@
 
 3. Documentacao
 
-	- Clareza das instrucoes do README e qualidadedos comentarios no codigo.
+	- Clareza das instrucoes do README e qualidade dos comentarios no codigo.
 
 4. UX/UI
 
 5. Teste: basicos e cobertura de casos de uso.
 
-6: Extra: um diferencial.
+6. Extra: um diferencial.
 
 ## Entrega
 
