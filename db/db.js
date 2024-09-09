@@ -1,5 +1,5 @@
 const Database = require('better-sqlite3');
-const db = new Database('./db/database.db', {verbose: console.log });
+const db = new Database('./db/database.db', { verbose: console.log });
 
 db.exec(`
 	PRAGMA foreign_keys=ON;
@@ -15,11 +15,11 @@ db.exec(`
         password TEXT NOT NULL
     );
 
-    CREATE TABLE IF NOT EXISTS TASK (
+    CREATE TABLE IF NOT EXISTS task (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL,
         description TEXT,
-        finished INTEGER NOT NULL DEFAULT 0,
+        finished INTEGER DEFAULT 0,
         user_id INTEGER NOT NULL,
         FOREIGN KEY (user_id) REFERENCES user(id)
     );
